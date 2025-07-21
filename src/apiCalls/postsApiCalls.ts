@@ -11,7 +11,6 @@ export async function getData() {
         return respones.json()
     }
 }
-
 export async function getInfoPost(id: String) {
     console.log(id)
     try {
