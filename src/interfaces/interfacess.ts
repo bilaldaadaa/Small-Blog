@@ -1,5 +1,6 @@
 
 import { Post } from "@prisma/client"
+
 export interface navProps {
     logo: string
     items: Array<itemsType>
@@ -17,12 +18,12 @@ export interface errorProps {
     reset: () => void
 }
 export interface showPostProps {
-    params: { id: string }
+    params: Promise<{ id: string }>
 }
 export interface FormAddEditProps {
     submit: String
     rows: number
-    response:Post
+    response: Post
 
 }
 export interface add {

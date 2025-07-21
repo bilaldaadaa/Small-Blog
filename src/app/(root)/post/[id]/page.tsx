@@ -1,11 +1,12 @@
 import { showPostProps } from '@/interfaces/interfacess'
 import React from 'react'
 
-const ShowPost = ({ params }: showPostProps) => {
+const ShowPost = async ({ params }: showPostProps) => {
+    const { id } = await params
 
     return (
         <div>
-            this post is {params.id}
+            this post is {id}
         </div>
     )
 }
