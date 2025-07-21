@@ -11,7 +11,7 @@ export interface itemsType {
     href: string
 }
 export interface editProps {
-    params: { id: string }
+    params: Promise<{ id: string }>
 }
 export interface errorProps {
     error: Error

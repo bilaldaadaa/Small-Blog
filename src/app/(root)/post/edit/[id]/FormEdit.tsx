@@ -3,7 +3,6 @@
 import { editPost } from "@/apiCalls/postsApiCalls"
 import { FormAddEditProps } from "@/interfaces/interfacess"
 import { useRouter } from "next/navigation"
-
 import { FormEvent, useRef, } from "react"
 
 const FormEdit = ({ submit, rows, response }: FormAddEditProps) => {

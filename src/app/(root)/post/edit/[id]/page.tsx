@@ -6,7 +6,6 @@ import { Post } from "@prisma/client"
 
 const page = async ({ params }: editProps) => {
     const response: Post = await getInfoPost(params.id)
-    console.log(response)
     return (
         <div>
             <FormEdit response={response} submit="Edit" rows={5} />
