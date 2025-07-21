@@ -11,7 +11,6 @@ const FormEdit = ({ submit, rows, response }: FormAddEditProps) => {
     const navigate = useRouter()
     const send = async (event: FormEvent) => {
         event.preventDefault()
-        console.log()
         const responsef = await editPost({ title: title.current?.value, description: description.current?.value }, response.id)
         if (responsef) {
             navigate.refresh()

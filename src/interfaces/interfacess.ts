@@ -23,8 +23,7 @@ export interface showPostProps {
 export interface FormAddEditProps {
     submit: String
     rows: number
-    response: Post
-
+    response?: Post
 }
 export interface add {
     title: string
