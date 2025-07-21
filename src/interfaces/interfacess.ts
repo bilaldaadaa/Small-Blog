@@ -1,6 +1,4 @@
 
-import { Post } from "@prisma/client"
-
 export interface navProps {
     logo: string
     items: Array<itemsType>
@@ -23,9 +21,22 @@ export interface showPostProps {
 export interface FormAddEditProps {
     submit: String
     rows: number
-    response?: Post
+    response?: {
+        id: number
+        title: string
+        description: string
+        createdAt: string
+        updatedAt: string
+    }
 }
 export interface add {
     title: string
     desc: string
+}
+export interface posts {
+    id: number
+    title: string
+    description: string
+    createdAt: string
+    updatedAt: string
 }

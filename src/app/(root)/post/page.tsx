@@ -1,11 +1,12 @@
 import { Suspense } from "react"
 import Loading from "./loading"
 import { getData } from "@/apiCalls/postsApiCalls"
-import { post } from "@prisma/client"
 import Link from "next/link"
 import DeletePost from "./DeletePost"
+import { posts } from "@/interfaces/interfacess"
 const post = async () => {
-    const posts: post[] = await getData()
+    const posts: posts[] = await getData()
+    console.log(posts)
     return (
         <Suspense fallback={<Loading />}>
             <div className="">
@@ -18,7 +19,7 @@ const post = async () => {
                                     <p className="text-[#b91c1c]">{post.description}</p>
                                     <div className="flex justify-between flex-col items-center gap-2">
                                         <Link className="w-full text-center bg-[#2563BE] h-[32px] text-white rounded-lg" href={`/post/edit/${post.id}`}>Edit</Link>
-                                        <DeletePost id={post.id} />
+                                        <DeletePost id={`${post.id}`} />
                                     </div>
                                 </div>
                             )
