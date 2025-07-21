@@ -1,0 +1,1 @@
+export const Domain = "https://vica-post-api.vercel.app"
